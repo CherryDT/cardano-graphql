@@ -106,7 +106,7 @@ CREATE VIEW "Reward" AS
 SELECT
   reward.amount,
   stake_address.view AS "address",
-  reward.epoch_no AS "epochNo",
+  reward.earned_epoch AS "earnedInEpochNo",
   reward.pool_id AS pool_hash_id
 FROM reward
 JOIN stake_address on reward.addr_id = stake_address.id;
